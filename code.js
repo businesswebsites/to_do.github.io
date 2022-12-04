@@ -35,6 +35,7 @@ function add_task(){
     child_div_bearbeiten.style.borderRadius = "1rem"
     child_div_bearbeiten.style.float = "right";
     child_div_bearbeiten.style.marginRight = "0";
+    //funktion um speichern button zu erstellen
     child_div_bearbeiten.onclick = function (){
         let p = make_input(input_text);
         let child_div_speichern = document.createElement("button");
@@ -43,9 +44,11 @@ function add_task(){
         child_div_speichern.style.marginRight = "0";
         const speichern = document.createTextNode("Speichern");
         child_div_speichern.appendChild(speichern);
+        //speichern button hinzufügen und bearbeiten button löschen
         newDiv.appendChild(child_div_speichern);
         newDiv.removeChild(child_div_bearbeiten);
 
+        //speichern funktion, um ergebnis zu übernehmen
         child_div_speichern.onclick = function(){
             make_div(input_text, input_text.firstChild.value);
             console.log(typeof(input_text))
