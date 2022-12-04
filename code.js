@@ -28,14 +28,12 @@ function add_task(){
 
     const child_div_delete = document.createElement("button");
     child_div_delete.style.borderRadius = "1rem";
-    //child_div_delete.style.float = "right";
-    child_div_delete.onclick = function (){
-        currentDiv.removeChild(newDiv);
-    }
     const delete_el = document.createTextNode("Löschen");
     child_div_delete.appendChild(delete_el);
     newDiv.appendChild(child_div_delete);
-
+    child_div_delete.onclick = function(){
+        document.getElementById("new_to_do").removeChild(newDiv)
+    }
 
 
     /*
@@ -46,4 +44,9 @@ function add_task(){
     newDiv.after(child_div_bearbeiten);*/
 
 
+}
+
+function del_element(elternteil, kind){
+    elternteil.removeChild(kind)
+    console.log("hello")
 }
