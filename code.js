@@ -37,7 +37,7 @@ function add_task(){
     child_div_bearbeiten.style.marginRight = "0";
     //funktion um speichern button zu erstellen
     child_div_bearbeiten.onclick = function (){
-        let p = make_input(input_text);
+        make_input(input_text);
         let child_div_speichern = document.createElement("button");
         child_div_speichern.style.borderRadius = "1rem"
         child_div_speichern.style.float = "right";
